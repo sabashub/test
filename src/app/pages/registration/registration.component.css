@@ -1,0 +1,152 @@
+.registration-form {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+h2 {
+  text-align: left;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.input-container {
+  flex: 1;
+  margin-right: 10px;
+  padding: 0 50px 0;
+}
+
+.input-container:last-child {
+  margin-right: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+}
+
+button.register-button {
+  display: block;
+  width: 150px;
+  padding: 10px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #007bff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+button.register-button:hover {
+  background-color: #0056b3;
+}
+.error-red {
+  color: red;
+}
+.registration-form {
+  width: 80%;
+  margin: auto;
+  form {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    position: relative;
+    gap: 30px 0;
+  }
+  h2 {
+    padding: 60px 0 30px 0;
+    color: #0056b3;
+  }
+  label {
+    color: #053354;
+    margin-bottom: 5px;
+  }
+  input {
+    height: 48px;
+    padding: 0 20px;
+    border: 1px solid rgba(155, 155, 155, 0.281);
+  }
+  span {
+    transform: translateY(20px);
+  }
+}
+
+.send-email-icon {
+  position: absolute;
+  right: 30px;
+  top: 37px;
+}
+
+.email-input {
+  position: relative;
+  cursor: pointer;
+}
+
+h2 {
+  text-align: left;
+}
+
+.input-group {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+  padding: 20px;
+}
+
+.input-container {
+  flex: 1;
+  margin-right: 10px;
+  padding: 0 50px 0;
+}
+
+.input-container:last-child {
+  margin-right: 0;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
+}
+
+input {
+  width: 100%;
+  padding: 8px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 40px;
+}
+
+button.register-button {
+  display: block;
+  position: absolute;
+
+  right: 35px;
+  bottom: -80px;
+  font-size: 18px;
+  color: #fff;
+  background-color: #053354;
+  border: none;
+  border-radius: 50px;
+  cursor: pointer;
+  margin-top: 20px;
+  padding: 10px 20px;
+}
+
+button.register-button:hover {
+  background-color: #0056b3;
+}
+.error-red {
+  color: red;
+}

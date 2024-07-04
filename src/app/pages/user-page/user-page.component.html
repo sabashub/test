@@ -1,0 +1,19 @@
+<div class="user_page_container">
+    <app-category></app-category>
+    <div class="user_description">
+        <img src="../../../assets/user.png" class="user_image" />
+        <p style="font-size: 18px; font-weight: 400; color: #18A4E1;">მომხმარებელი</p>
+        <h4>პირადი ნომერი:</h4>
+        <p class="dynamic-data">{{ user?.privateNumber }}</p>
+        <h4>Email:</h4>
+        <p class="dynamic-data">{{ user?.email }}</p>
+        <button class="forget-password-button" (click)="openForgetPasswordDialog()">პაროლის შეცვლა</button>
+        <h4>ჩემი ჯავშანი</h4>
+        <p class="dynamic-data" *ngIf="appointments.length > 0">{{appointments.length}}</p>
+    </div>
+    <div>
+        <h2 class="my_appointments">ჩემი ჯავშანი <span style="color: rgb(190, 190, 190);">({{appointments.length}})</span></h2>
+        <app-user-calendar></app-user-calendar>
+    </div>
+    
+</div>

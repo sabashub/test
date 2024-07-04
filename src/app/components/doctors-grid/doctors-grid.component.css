@@ -1,0 +1,157 @@
+/* doctors-grid.component.css */
+.doctors-grid {
+  min-width: 1200px;
+  height: 600px;
+}
+
+.doctor-details-container {
+  width: 100%;
+  button {
+    background: transparent;
+    border: 1px solid rgba(128, 128, 128, 0.347);
+    border-radius: 4px;
+    transform: translateY(-30px);
+  }
+}
+.header {
+  padding: 10px;
+}
+
+.header-row {
+  background-color: #f0faff;
+  font-weight: bold;
+}
+
+.row {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #ddd;
+  padding: 10px;
+}
+
+.column {
+  flex: 1;
+}
+
+.doctor_thumbnail {
+  max-width: 40px;
+  max-height: 40px;
+  border-radius: 50%;
+}
+
+button {
+  cursor: pointer;
+  padding: 5px 10px;
+  margin-right: 5px;
+}
+p {
+  margin: 0;
+}
+h4 {
+  margin: 0;
+}
+
+.doctor_details {
+  display: grid;
+  grid-template-columns: 45% 55%;
+  place-items: start;
+}
+
+.doctor_image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+.doctor_name {
+  font-size: 18px;
+  font-weight: 500;
+  color: #18a4e1;
+}
+.cont {
+  max-height: 700px;
+  overflow: scroll;
+}
+
+.border {
+  padding: 10px;
+  border: 1px solid rgba(202, 202, 202, 0.235);
+  border-radius: 8px;
+}
+
+.doctor_detail_about {
+  display: grid;
+  gap: 35px;
+  div {
+    p {
+      display: grid;
+      place-content: center;
+      justify-content: center;
+      align-items: center;
+      margin-top: 10px;
+    }
+  }
+}
+h4 {
+  font-size: 18px;
+  color: #053354;
+  font-weight: 400;
+}
+p {
+  opacity: 0.4;
+}
+.delete_button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #ff93a6;
+  border: none;
+}
+
+.edit_button {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background-color: #dafaee;
+  border: none;
+}
+
+.doctor_details_container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 50px;
+}
+
+.doctor-image {
+  width: 157px;
+  height: 157px;
+  border-radius: 50%;
+  padding: 30px 70px 10px 60px;
+}
+
+.doctor-info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.doctor-personal-data {
+  h1 {
+    color: #053354;
+    font-size: 22px;
+  }
+  p {
+    opacity: 0.3;
+  }
+}
+
+.doctor-achievements {
+  max-width: 500px;
+}
+
+.doctor-inf {
+  display: grid;
+  grid-template-columns: 30% 40% 30%;
+  place-items: center;
+}

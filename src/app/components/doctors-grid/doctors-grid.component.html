@@ -1,0 +1,93 @@
+<div class="doctors-grid">
+  <div class="header">
+    <h2>Doctors</h2>
+  </div>
+  <!-- Display the grid only if selectedDoctor is null -->
+<div class="cont">
+  <div *ngIf="!selectedDoctor">
+    <div class="row header-row">
+      <div class="column">სახელი</div>
+      <div class="column">კატეგორია</div>
+      <div class="column">ფოტოსურათი</div>
+      <div class="column">რეიტინგი</div>
+      <div class="column"></div>
+    </div>
+    <div
+      class="row"
+      *ngFor="let doctor of doctors"
+      (click)="showDoctorDetails(doctor)"
+    >
+      <div class="column">{{ doctor.firstName }} {{ doctor.lastName }}</div>
+      <div class="column">{{ doctor.category }}</div>
+      <div class="column">
+        <img
+          [src]="doctor.imageUrl"
+          alt="Doctor Image"
+          class="doctor_thumbnail"
+        />
+      </div>
+      <div class="column">⭐️⭐️⭐️</div>
+      <div class="column">
+        <button class="edit_button">
+          <img src="../../../assets/editButton.png" />
+        </button>
+        <button (click)="deleteDoctor(doctor)" class="delete_button">
+          <img src="../../../assets/deleteButton.png" />
+        </button>
+      </div>
+    </div>
+  </div>
+  <!-- Display the card only if selectedDoctor is not null -->
+  <div class="doctor-details-container"  *ngIf="selectedDoctor">
+    <div class="doctor_details">
+      <div class="doctor-inf border" >
+        <div class="doctor-info" >
+          <img
+            [src]="selectedDoctor.imageUrl"
+            class="doctor-image"
+            alt="User Image"
+          />
+          <div class="doctor-personal-data">
+            <h1>
+              {{ selectedDoctor?.firstName }} {{ selectedDoctor?.lastName }}
+            </h1>
+            <p>{{ selectedDoctor?.category }}</p>
+            <ng-container *ngFor="let i of [1, 2, 3, 4, 5]">
+              <img src="../../../assets/star-icon.svg" />
+            </ng-container>
+          </div>
+        </div>
+        <div class="doctor_detail_about">
+          <div>
+            <h4>პირადი ნომერი:</h4>
+            <p>{{ selectedDoctor.privateNumber }}</p>
+          </div>
+          <div>
+            <h4>Email:</h4>
+            <p>{{ selectedDoctor.email }}</p>
+          </div>
+          <div>
+            <h4 style="cursor: pointer" (click)="sendResetCode()">
+              პაროლის შეცვლა
+            </h4>
+          </div>
+        </div>
+        <div class="doctor_detail_about">
+          <div style="transform: translateY(-75px)">
+            <h4>დაჯავშნილია:</h4>
+            <p></p>
+          </div>
+        </div>
+      </div>
+
+      <div style="scale: 0.9; transform: translateX(-100px)">
+        <app-doctor-calendar
+          [doctorId]="doctorId"
+          
+        ></app-doctor-calendar>
+      </div>
+    </div>
+    <button (click)="hideDoctorDetails()">Back to Grid</button>
+  </div>
+</div>
+</div>

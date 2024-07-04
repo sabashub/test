@@ -1,0 +1,47 @@
+.user_page_container {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+p {
+  margin: 0;
+}
+h4 {
+  margin: 0;
+  font-weight: 400;
+  font-size: 18px;
+}
+.forget-password-button {
+  background: transparent;
+  border: 0;
+  font-weight: 400;
+  font-size: 18px;
+  cursor: pointer;
+}
+.dynamic-data {
+  padding-top: 0;
+  opacity: 0.3;
+  transform: translateY(-10px);
+}
+
+.user_description {
+  width: 200px;
+  height: 600px;
+  margin-top: 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border: 1px solid #ecf2f8;
+  gap: 30px;
+}
+
+.user_image {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
+
+.my_appointments {
+  color: #18a4e1;
+}

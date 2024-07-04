@@ -1,0 +1,24 @@
+<div class="doctor_details_container">
+    <div>
+        <app-category></app-category>
+    </div> 
+    <div>
+        <div *ngIf="doctor" class="doctor-description">
+            <div class="doctor-info">
+              <img [src]="doctor?.imageUrl" class="doctor-image" alt="User Image">
+              <div class="doctor-personal-data">
+                <h1>{{doctor?.firstName}} {{doctor?.lastName}}</h1>
+                <p>{{doctor?.category}}</p>
+                <ng-container *ngFor="let i of [1, 2, 3, 4, 5]">
+                  <img src="../../../assets/star-icon.svg" />
+                </ng-container>
+              </div>
+            </div>
+            <p class="doctor-achievements"> {{doctor?.achievements}}</p>
+          </div>
+        <app-doctor-calendar [doctorId]="doctorNumId"></app-doctor-calendar>
+    </div>    
+        
+</div>
+    
+    
